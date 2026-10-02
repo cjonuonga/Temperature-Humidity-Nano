@@ -22,7 +22,6 @@ void setup() {
   lcd.begin(16,2);
   HT.begin();
   delay(wtime); 
-  pinMode(sensePin, OUTPUT);
 
 }
 
@@ -41,6 +40,8 @@ void loop() {
   lcd.print("Humidity: ");
   lcd.print(humidity);
   lcd.print("%");
-  Serial.print(tempF); 
+  Serial.println(tempF); 
+
+  delay(dt);
 
 }
